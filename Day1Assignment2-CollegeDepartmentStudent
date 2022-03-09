@@ -1,0 +1,78 @@
+package org.college;
+
+public class College {
+
+	public void collegeCode()
+	{
+		System.out.println("Code001");
+	}
+	
+	public void collegeRank()
+	{
+		
+		System.out.println(" Rank number 1");
+	}
+	
+	public void collegeName()
+	{
+	
+		System.out.println("PSG College");
+	}
+}
+--------------------------------------------
+
+package org.Department;
+
+import org.college.College;
+
+public class Department extends College{
+
+	public void deptName()
+	{
+		System.out.println("Department name is physics");
+	}
+}
+-------------------------------------------------------
+package org.Student;
+
+import org.Department.Department;
+import org.college.College;
+
+public class Student extends Department
+{
+
+	 
+		// TODO Auto-generated method stub
+
+		public void studentName()
+		{
+			System.out.println("StudentName is Suresh");
+		}
+	   
+		public void studentDept()
+		{
+			System.out.println("Dept of Student:physic");
+	    }
+		
+		public void studentID()
+		{
+			System.out.println("Studentid:100");
+		}
+	
+       
+	 public static void main(String[] args)
+	 
+	 {
+		 Student s= new Student();
+		 s.studentDept();
+		 s.studentID();
+		 s.studentName();
+		 s.collegeName();
+		 s.collegeCode();
+		 s.collegeRank();
+		 s.deptName();
+		 
+		 
+	 }
+	 
+} 
