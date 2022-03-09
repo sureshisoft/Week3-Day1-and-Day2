@@ -1,0 +1,32 @@
+package Overloading;
+
+public class Students {
+
+	
+		// TODO Auto-generated method stub
+
+		public  void getStudentInfo(int id)
+		{
+			System.out.println("The student id is  "+ id);
+			
+			}
+		public void getStudentInfo(int idnum,String name)
+		{
+			System.out.println("The student id is and Name is james "+ idnum +":"+name);
+		}
+	
+		public void getStudentInfo(int id,long phoneNumber, String name)
+		{
+			System.out.println("The student id, phonenumber and Name is james: "+":"+id+":"+ phoneNumber +":"+name);
+		}
+
+
+
+public static void main(String[] args) {
+	
+	  Students stud=new Students();
+	  stud.getStudentInfo(500);
+	  stud.getStudentInfo(300,"james");
+	  stud.getStudentInfo(400,32456,"Bond");
+}
+}
