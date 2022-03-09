@@ -1,0 +1,21 @@
+package Week3.day2;
+
+public class Assignment5anagram {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		String text1 = "stops";
+	//	 *Declare another String
+			String text2 = "potss"; 
+			if(text1.equalsIgnoreCase(text2))
+			{
+				System.out.println("String is matched");
+			}
+			else
+			{
+				System.out.println("String is not matched");
+			}
+	}
+
+}
