@@ -1,0 +1,46 @@
+package overriding;
+
+public class BankInfo {
+	
+	
+	// Methods :saving(),fixed(),deposit()
+
+	public void saving()
+	{
+		System.out.println("Savings account");
+	}
+	
+	public void fixed()
+	{
+		System.out.println("Fixed acct is:15%");
+	}
+
+	public void depoist()
+	{
+		System.out.println("Fixed acct is:15%");	
+	}
+}
+
+--------------------------------------------------------------------
+package overriding;
+
+public class AxisBank extends BankInfo
+{
+
+	
+	public void depoist()
+	{
+		System.out.println("The Child method Depost:45");
+	}
+
+	public static void main(String[] args) 
+	{
+		// TODO Auto-generated method stub
+
+		AxisBank ax= new AxisBank();
+		ax.depoist();
+		ax.fixed();
+		ax.saving();
+	}
+
+}
