@@ -1,0 +1,43 @@
+package Week3.day2;
+
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.LinkedHashSet;
+import java.util.List;
+import java.util.Set;
+
+public class RemoveDuplicates {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method st
+		
+		String str = "We learn java basics as part of java sessions in java week1";
+		
+		
+		ArrayList<String> s= new ArrayList<String>();
+		s.add("we");
+		s.add("learn");
+		s.add("java");
+		s.add("basics");
+		s.add("as");
+		s.add("part");
+		s.add("of");
+		s.add("java");
+		s.add("sessions");
+		s.add("in");
+		s.add("java");
+		s.add("week1");
+		
+		System.out.println(s.toString());
+		
+		Set<String> Removeduplicates= new LinkedHashSet<String>(s);
+		
+		System.out.println("The Element Displayed after removing dupicatess:"+Removeduplicates );
+		
+		}
+	}
+	
+
+	
+
+
