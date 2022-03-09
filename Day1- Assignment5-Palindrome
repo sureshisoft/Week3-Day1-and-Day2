@@ -1,0 +1,15 @@
+package Week3.day2;
+
+public class AssignmentPalindrome {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		StringBuilder s= new StringBuilder("suresh");
+		System.out.println("The Plaindrome string:"+s.reverse());
+		
+		
+		
+	}
+
+}
