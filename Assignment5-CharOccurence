@@ -1,0 +1,27 @@
+package Week3.day2;
+
+public class AssignmentCharoccurence {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		String str = "$$ Welcome to 2nd Class of Automation $$";
+	      for(int i=0; i < str.length(); i++) {
+	        if(Character.isDigit(str.charAt(i)));
+	       
+	         {
+	            System.out.println("'"+ str.charAt(i)+"' is a number");
+	         }
+	         if((Character.isWhitespace(str.charAt(i)))) {
+	            System.out.println("'"+ str.charAt(i)+"' is a whitespace");
+	           
+	         }
+	         if(Character.isAlphabetic(str.charAt(i)))
+{
+	System.out.println("'"+ str.charAt(i)+"' is a character");
+}
+	      }
+	   }
+	}
+
+
