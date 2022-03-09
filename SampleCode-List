@@ -1,0 +1,51 @@
+package Week3.day2;
+
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class SampleCodeList {
+
+	public static void main(String[] args) throws InterruptedException {
+		// TODO Auto-generated method stub
+
+		WebDriverManager.chromedriver().setup();
+		ChromeOptions op = new ChromeOptions();
+	
+				op.addArguments("--disable-notifications");
+			//	browser = webdriver.Chrome(chrome_options=chrome_options)
+		ChromeDriver driver = new ChromeDriver(op);
+		driver.get("https://www.ajio.com/");
+		driver.manage().window().maximize();
+		driver.findElement(By.xpath("//input[@placeholder='Search AJIO']")).sendKeys("bags",Keys.ENTER);
+		Thread.sleep(5000);
+		driver.findElement(By.xpath("//label[@for='Men']")).click();
+		Thread.sleep(5000);
+		driver.findElement(By.xpath("//label[@for='Men - Fashion Bags']")).click();
+	String Text=driver.findElement(By.xpath("//div[@class='filter']//div")).getText();
+	System.out.println("Number of items:"+Text);
+	List<WebElement> Brand= driver.findElements(By.xpath("//div[@class='brand']"));
+	System.out.println("The number of List in Brand:"+Brand.size());
+	for(int i=0;i<Brand.size();i++)
+	{
+		String allProductNames=Brand.get(i).getText();
+		System.out.println("The Product name:"+allProductNames);
+	}	
+	
+	Thread.sleep(7000);
+	List<WebElement> Bagnames= driver.findElements(By.xpath("//div[@class='nameCls']"));
+	System.out.println("The number of List in Bagnames:"+Bagnames.size());
+	for(int j=0;j<=Bagnames.size()-1;j++)
+	{
+		String AllBagnames=Bagnames.get(j).getText();
+		System.out.println("The  Bagnames is:"+AllBagnames);
+	}
+	}
+	
+}
