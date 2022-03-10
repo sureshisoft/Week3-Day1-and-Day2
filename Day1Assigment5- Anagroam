@@ -1,21 +1,41 @@
 package Week3.day2;
 
+import java.util.Arrays;
+
 public class Assignment5anagram {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		String text1 = "stops";
-	//	 *Declare another String
-			String text2 = "potss"; 
-			if(text1.equalsIgnoreCase(text2))
-			{
-				System.out.println("String is matched");
-			}
-			else
-			{
-				System.out.println("String is not matched");
-			}
-	}
+		String text1 = "listen";
+		// Declare another String
+		String text2 = "silent";
+		String temp = "";
 
+		boolean flag = true;
+		
+		if (text1.length() == text2.length()) {
+			
+			char[] charArrayTxt1 = text1.toCharArray();
+			char[] charArrayTxt2 = text2.toCharArray();
+			Arrays.sort(charArrayTxt1);
+			Arrays.sort(charArrayTxt2);
+			for (int i = 0; i < charArrayTxt1.length; i++) {
+				if (!(charArrayTxt1[i] == charArrayTxt2[i])) {
+					flag = false;
+					temp = temp + charArrayTxt2[i];
+				}
+			}
+			if (flag) {
+				System.err.println("Strings are Anagram");
+			} else {
+				System.out.println(
+						"Strings are not anagram "
+								+ temp);
+			}
+
+		} else {
+			System.out.println("Strings are not Anagram");
+		}
+	}
 }
